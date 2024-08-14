@@ -1,7 +1,7 @@
 # OBS End Screen
 
 ## JSON Example
-File should be named `config.json` and located in the [config](./config/) folder.
+File should be named `config.json` and located in the config folder. (folder must be created manually)
 ```json
 [
     {"image": "discord", "text": "https://discord.gg/54xWBDpsSJ", "title": "Discord"},
