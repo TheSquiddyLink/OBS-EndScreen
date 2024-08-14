@@ -1,5 +1,28 @@
 # OBS End Screen
 
+
+## Description
+This is a simple document that will display images with a title and a description. The intent for this is to be used to display socials and other information durring the end credits, however it can be used for other purposes.
+
+**NOTE** This project currnetly not complete, however it is functional, further documentation will be added as the project progresses, as well as new features are planned to be added.
+
+This project as well as others on this GitHub are made by Squibs (aka TheSquiddyLink). This project is being use on [SquibsLand - Twitch](https://www.twitch.tv/squibsland).
+
+## Installation
+**NOTE** This project is currently in beta and many features are not yet implemented. To get the latest release of the project, please download the latest release from the [releases page](https://github.com/TheSquiddyLink/OBS-EndScreen/releases).
+
+1. Download the Source Code from the [releases page](https://github.com/TheSquiddyLink/OBS-EndScreen/releases). Or Download the Main Branch.
+2. Extract the zip file.
+3. Navigate to the `config` folder, and create a new file named `config.json`.
+4. Open the `config.json` file and add your information. See the [JSON Example](#json-example) for more information.
+5. Navigate to the `images` folder, and add your images. All images must be a PNG. Square images are recommended.
+6. Open the `index.html` file in a web browser to view the project.
+7. Open OBS and add a new browser source.
+8. Select local file then chose the `index.html` file in this project.
+9. Set the width to 800 and the height to 300 for the best results.
+
+If you wish to adjust the style of the project, you can edit the `main.css` file in the `style` folder [here](./style/main.css). Information on overiding the CSS can be found [here](#css-overrides).
+
 ## Settings
 These are the settings that can be changed, if not specified in the config file they will use the following defaults:
 
