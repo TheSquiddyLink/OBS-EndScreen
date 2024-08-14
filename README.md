@@ -7,7 +7,8 @@ File should be named `config.json` and located in the config folder. (folder mus
     "settings": {
         "speed": 10,
         "shuffle": true,
-        "bounceTitle": false
+        "bounceTitle": true,
+        "horizontal": true
     },
     "data": [
         {"image": "discord", "text": "https://discord.gg/54xWBDpsSJ", "title": "Discord"},
