@@ -5,7 +5,8 @@ File should be named `config.json` and located in the config folder. (folder mus
 ```json
 {
     "settings": {
-        "speed": 10
+        "speed": 10,
+        "shuffle": true
     },
     "data": [
         {"image": "discord", "text": "https://discord.gg/54xWBDpsSJ", "title": "Discord"},
