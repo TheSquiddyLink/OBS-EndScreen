@@ -6,7 +6,8 @@ File should be named `config.json` and located in the config folder. (folder mus
 {
     "settings": {
         "speed": 10,
-        "shuffle": true
+        "shuffle": true,
+        "bounceTitle": false
     },
     "data": [
         {"image": "discord", "text": "https://discord.gg/54xWBDpsSJ", "title": "Discord"},
@@ -18,6 +19,4 @@ File should be named `config.json` and located in the config folder. (folder mus
         {"image": "twitch", "text":"https://www.twitch.tv/poisonmercury", "title": "Featured Streamer"}
     ]
 }
-
-
 ```
