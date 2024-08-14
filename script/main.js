@@ -42,9 +42,10 @@ async function main(){
         aniLenS = config.settings.speed;
         aniLenMs = aniLenS * 1000;
     }
-    container.style.animation = config.settings.horizontalSlide 
-        ? `slide ${aniLenS}s ease-in-out infinite` 
-        : `slideH ${aniLenS}s ease-in-out infinite`;
+    console.log(config.settings.horizontal)
+    container.style.animation = config.settings.horizontal 
+        ? `slideH ${aniLenS}s ease-in-out infinite` 
+        : `slide ${aniLenS}s ease-in-out infinite`;
     len = config.data.length;
     update();
     container.addEventListener('animationiteration', (e) => {
