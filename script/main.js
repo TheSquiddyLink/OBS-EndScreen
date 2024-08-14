@@ -17,6 +17,7 @@ const title = document.getElementById("title");
  * @property {?number} settings.speed
  * @property {?boolean} settings.shuffle
  * @property {?boolean} settings.bounceTitle
+ * @property {?boolean} settings.horizontalSlide
  * @property {Array<Option>} data
  */
 
@@ -41,7 +42,7 @@ async function main(){
         aniLenS = config.settings.speed;
         aniLenMs = aniLenS * 1000;
     }
-    container.style.animation = `slide ${aniLenS}s infinite`;
+    container.style.animation = config.settings.horizontalSlide ? `slide ${aniLenS}s infinite` : `slideH ${aniLenS}s linear infinite`;
     len = config.data.length;
     update();
     container.addEventListener('animationiteration', (e) => {
