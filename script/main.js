@@ -16,9 +16,13 @@ const title = document.getElementById("title");
  * @property {Object} settings
  * @property {?number} settings.speed
  * @property {?boolean} settings.shuffle
+ * @property {?boolean} settings.bounceTitle
  * @property {Array<Option>} data
  */
 
+/**
+ * @type {Config}
+ */
 var config
 
 var aniLenMs = 10000;
@@ -70,10 +74,15 @@ function update(){
     image.src = "assets/" + config.data[index].image + ".png";
     text.innerHTML = config.data[index].text;
     title.innerHTML = "";
-    let letters = spanPerLetter(config.data[index].title)
-    letters.forEach((letter, index) => {
-        title.appendChild(letter);
-    });
+    if(config.settings.bounceTitle){
+        let letters = spanPerLetter(config.data[index].title)
+        letters.forEach((letter, index) => {
+            title.appendChild(letter);
+        });
+    } else {
+        title.innerHTML = config.data[index].title;
+    }
+    
 }
 main();
 
