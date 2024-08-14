@@ -10,6 +10,7 @@ section {
 }
 .container {
     display: flex;
+    animation: slide 10s infinite;
 }
 #image {
     width: 100px;
@@ -19,7 +20,27 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100px;
 }
 #text {
     margin-left: 25px;
+}
+
+@keyframes slide {
+    0% {
+        translate: 0 -100px;
+        opacity: 0;
+    }
+    25% {
+        translate: 0 0px;
+        opacity: 100%;
+    }
+    75% {
+        translate: 0 0px;
+        opacity: 100%;
+    }
+    100% {
+        translate: 0 100px;
+        opacity: 0;
+    }
 }
