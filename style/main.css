@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+}
+section {
+    display: flex;
+    justify-content: space-around;
+}
+.container {
+    display: flex;
+}
+#image {
+    width: 100px;
+    height: 100px;
+}
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#text {
+    margin-left: 25px;
+}
