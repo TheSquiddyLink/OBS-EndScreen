@@ -8,7 +8,7 @@ section {
     display: flex;
     justify-content: space-around;
 }
-#container {
+#imgText {
     display: flex;
 }
 #image {
@@ -24,6 +24,11 @@ section {
 #text {
     margin-left: 25px;
     font-size: xx-large;
+}
+#title {
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 10px;
 }
 
 @keyframes slide {

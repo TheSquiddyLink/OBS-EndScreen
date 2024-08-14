@@ -1,10 +1,13 @@
 const image = document.getElementById("image");
 const text = document.getElementById("text");
 const container = document.getElementById("container");
+const title = document.getElementById("title");
+
 /**
  * @typedef {Object} Option
  * @property {string} text
  * @property {string} image
+ * @property {string} title
  */
 
 /**
@@ -40,6 +43,7 @@ async function main(){
 function update(){
     image.src = "assets/" + config[index].image + ".png";
     text.innerHTML = config[index].text;
+    title.innerHTML = config[index].title;
 }
 main();
 function sleep(ms){
