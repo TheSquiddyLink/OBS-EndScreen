@@ -10,23 +10,33 @@ const title = document.getElementById("title");
  * @property {string} title
  */
 
+
 /**
- * @type {Array<Option>}
+ * @typedef {Object} Config
+ * @property {Object} settings
+ * @property {?number} settings.speed
+ * @property {Array<Option>} data
  */
+
 var config
 
-const aniLenMs = 10000;
-const aniLenS = aniLenMs / 1000;
+var aniLenMs = 10000;
+var aniLenS = aniLenMs / 1000;
 
 var index = 0
 
 var len;
 
 async function main(){
-    container.style.animation = `slide ${aniLenS}s infinite`;
+    
     const raw = await fetch("config/config.json");
     const rawStr = await raw.text();
     config = await JSON.parse(rawStr);
+    if(config.settings.speed){
+        aniLenS = config.settings.speed;
+        aniLenMs = aniLenS * 1000;
+    }
+    container.style.animation = `slide ${aniLenS}s infinite`;
     len = config.length;
     update();
     container.addEventListener('animationiteration', (e) => {
@@ -55,10 +65,10 @@ function spanPerLetter(string){
     return arr;
 }
 function update(){
-    image.src = "assets/" + config[index].image + ".png";
-    text.innerHTML = config[index].text;
+    image.src = "assets/" + config.data[index].image + ".png";
+    text.innerHTML = config.data[index].text;
     title.innerHTML = "";
-    let letters = spanPerLetter(config[index].title)
+    let letters = spanPerLetter(config.data[index].title)
     letters.forEach((letter, index) => {
         title.appendChild(letter);
     });
