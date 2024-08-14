@@ -23,6 +23,7 @@ section {
 }
 #text {
     margin-left: 25px;
+    font-size: xx-large;
 }
 
 @keyframes slide {
