@@ -8,6 +8,8 @@ This is a simple document that will display images with a title and a descriptio
 
 This project as well as others on this GitHub are made by Squibs (aka TheSquiddyLink). This project is being use on [SquibsLand - Twitch](https://www.twitch.tv/squibsland).
 
+If you would like to preview the project you can head to the [Demo](https://thesquiddylink.github.io/OBS-EndScreen/).
+
 ## Installation
 **NOTE** This project is currently in beta and many features are not yet implemented. To get the latest release of the project, please download the latest release from the [releases page](https://github.com/TheSquiddyLink/OBS-EndScreen/releases).
 
