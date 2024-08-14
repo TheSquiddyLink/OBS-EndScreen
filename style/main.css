@@ -30,6 +30,10 @@ section {
         translate: 0 -100px;
         opacity: 0;
     }
+    5% {
+        translate: 0 -100px;
+        opacity: 0;
+    }
     25% {
         translate: 0 0px;
         opacity: 100%;
@@ -37,6 +41,10 @@ section {
     75% {
         translate: 0 0px;
         opacity: 100%;
+    }
+    95% {
+        translate: 0 100px;
+        opacity: 0;
     }
     100% {
         translate: 0 100px;
