@@ -15,6 +15,7 @@ const title = document.getElementById("title");
  * @typedef {Object} Config
  * @property {Object} settings
  * @property {?number} settings.speed
+ * @property {?boolean} settings.shuffle
  * @property {Array<Option>} data
  */
 
@@ -37,12 +38,13 @@ async function main(){
         aniLenMs = aniLenS * 1000;
     }
     container.style.animation = `slide ${aniLenS}s infinite`;
-    len = config.length;
+    len = config.data.length;
     update();
     container.addEventListener('animationiteration', (e) => {
         if(e.target !== container) return;
         console.log("done");
         index++;
+        if(config.settings.shuffle) shuffle();
         if(index >= len) index = 0;
         update();
     })
@@ -74,6 +76,16 @@ function update(){
     });
 }
 main();
+
+function shuffle(){
+    console.log("shuffling");
+    if(len <= 1) return index;
+    var newIndex = Math.floor(Math.random() * len);
+    while(newIndex === index){
+        newIndex = Math.floor(Math.random() * len);
+    }
+    index = newIndex;
+}
 function sleep(ms){
     return new Promise(resolve => setTimeout(resolve, ms));
 }
