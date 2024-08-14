@@ -39,11 +39,30 @@ async function main(){
     }
 
 }
-
+function seperateLetters(string){
+    const letters = string.split("");
+    return letters;
+}
+function spanPerLetter(string){
+    const letters = seperateLetters(string);
+    const arr = [];
+    letters.forEach((letter, index) => {
+        let element = document.createElement("span");
+        element.innerHTML = letter;
+        element.className = "letter";
+        element.style.animationDelay = `${index * 0.25}s`;
+        arr.push(element);
+    });
+    return arr;
+}
 function update(){
     image.src = "assets/" + config[index].image + ".png";
     text.innerHTML = config[index].text;
-    title.innerHTML = config[index].title;
+    title.innerHTML = "";
+    let letters = spanPerLetter(config[index].title)
+    letters.forEach((letter, index) => {
+        title.appendChild(letter);
+    });
 }
 main();
 function sleep(ms){

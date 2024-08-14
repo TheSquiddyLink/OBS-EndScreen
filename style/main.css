@@ -32,7 +32,10 @@ section {
     font-size: xx-large;
     margin-bottom: 10px;
 }
-
+#title > * {
+    display: inline-block;
+    animation: letterBounce 1s ease-in-out infinite;
+}
 
 @keyframes slide {
     0% {
@@ -58,5 +61,17 @@ section {
     100% {
         transform: translateY(100px);
         opacity: 0;
+    }
+}
+
+@keyframes letterBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
