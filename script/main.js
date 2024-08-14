@@ -26,6 +26,20 @@ const title = document.getElementById("title");
  */
 var config
 
+
+const exampleConfig = {
+    settings: {
+        speed: 10,
+        shuffle: false,
+        bounceTitle: true,
+        horizontal: false,
+    },
+    data: [
+        {image: "discord", text: "https://discord.gg/example", title: "Discord"},
+        {image: "twitch", text: "https://www.twitch.tv/example", title: "Twitch"},
+        {image: "youtube", text: "@example", title: "YouTube" },
+    ]
+}
 var aniLenMs = 10000;
 var aniLenS = aniLenMs / 1000;
 
@@ -34,10 +48,16 @@ var index = 0
 var len;
 
 async function main(){
+    try {
+        const raw = await fetch("config/config.json");
+        const rawStr = await raw.text();
+        config = await JSON.parse(rawStr);
+    } catch(e){
+        console.log("Error loading config.json");
+        console.log(e);
+        config = exampleConfig;
+    }
     
-    const raw = await fetch("config/config.json");
-    const rawStr = await raw.text();
-    config = await JSON.parse(rawStr);
     if(config.settings.speed){
         aniLenS = config.settings.speed;
         aniLenMs = aniLenS * 1000;
