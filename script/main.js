@@ -39,6 +39,7 @@ async function main(){
 }
 function seperateLetters(string){
     const letters = string.split("");
+    console.log(letters);
     return letters;
 }
 function spanPerLetter(string){
@@ -46,7 +47,7 @@ function spanPerLetter(string){
     const arr = [];
     letters.forEach((letter, index) => {
         let element = document.createElement("span");
-        element.innerHTML = letter;
+        element.innerHTML = letter === " " ? "&nbsp;" : letter;
         element.className = "letter";
         element.style.animationDelay = `${index * 0.25}s`;
         arr.push(element);
