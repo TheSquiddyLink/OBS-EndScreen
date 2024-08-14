@@ -33,3 +33,18 @@ File should be named `config.json` and located in the config folder. (folder mus
     ]
 }
 ```
+## CSS Overrides
+If you want to override the CSS in obs these are the classes that are used:
+To see the current CSS naviate to [style/main.css](./style/main.css)
+
+- `body` The entier document
+- `#imgText` The section that contains the image and text
+- `#image` The image element
+- `.textContainer` The container for the text
+- `#text` The text element
+- `#title` The title element
+- `#title > *` The title text (Used for the bounce animation)
+
+- `@keyframes slide` The animation for the slide
+- `@keyframes bounce` The animation for the bounce
+- `@keyframes slideH` The animation for horizontal slide
