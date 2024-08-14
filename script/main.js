@@ -28,16 +28,14 @@ async function main(){
     const rawStr = await raw.text();
     config = await JSON.parse(rawStr);
     len = config.length;
-
     update();
-    while(true){
-        await sleep(aniLenMs);
+    container.addEventListener('animationiteration', (e) => {
+        if(e.target !== container) return;
         console.log("done");
         index++;
         if(index >= len) index = 0;
         update();
-    }
-
+    })
 }
 function seperateLetters(string){
     const letters = string.split("");
