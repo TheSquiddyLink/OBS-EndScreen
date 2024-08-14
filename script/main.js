@@ -31,7 +31,7 @@ async function main(){
 
     update();
     while(true){
-        await sleep(aniLenMs - 100);
+        await sleep(aniLenMs);
         console.log("done");
         index++;
         if(index >= len) index = 0;
