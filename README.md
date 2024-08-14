@@ -2,15 +2,11 @@
 
 ## Settings
 These are the settings that can be changed, if not specified in the config file they will use the following defaults:
-- Speed: 10 seconds
-- Shuffle: false
-- Bounce Title: false
-- Horizontal: false
 
-- Speed: Speed of the animation in seconds
-- Shuffle: Shuffle the order of the images
-- Bounce Title: Add a bounce animation to the title
-- Horizontal: Change the animation direction to horizontal 
+- Speed: Speed of the animation in seconds (default 10)
+- Shuffle: Shuffle the order of the images (default false)
+- Bounce Title: Add a bounce animation to the title (default false)
+- Horizontal: Change the animation direction to horizontal (default false)
 
 ## JSON Example
 File should be named `config.json` and located in the config folder. (folder must be created manually)
@@ -18,18 +14,14 @@ File should be named `config.json` and located in the config folder. (folder mus
 {
     "settings": {
         "speed": 10,
-        "shuffle": true,
+        "shuffle": false,
         "bounceTitle": true,
-        "horizontal": true
+        "horizontal": false,
     },
     "data": [
-        {"image": "discord", "text": "https://discord.gg/54xWBDpsSJ", "title": "Discord"},
-        {"image": "twitch", "text": "https://www.twitch.tv/squibsland", "title": "Twitch"},
-        {"image": "youtube", "text": "@SquibsLand", "title": "YouTube" },
-        {"image": "youtube", "text": "@SquibsLandVODS", "title": "YouTube VODS"},
-    
-        {"image": "twitch", "text":"https://www.twitch.tv/agent_t05", "title": "Featured Streamer"},
-        {"image": "twitch", "text":"https://www.twitch.tv/poisonmercury", "title": "Featured Streamer"}
+        {"image": "discord", "text": "https://discord.gg/example", "title": "Discord"},
+        {"image": "twitch", "text": "https://www.twitch.tv/example", "title": "Twitch"},
+        {"image": "youtube", "text": "@example", "title": "YouTube" },
     ]
 }
 ```
