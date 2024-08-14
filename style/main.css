@@ -8,9 +8,8 @@ section {
     display: flex;
     justify-content: space-around;
 }
-.container {
+#container {
     display: flex;
-    animation: slide 10s infinite;
 }
 #image {
     width: 100px;
