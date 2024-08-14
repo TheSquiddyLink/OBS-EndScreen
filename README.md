@@ -1,5 +1,17 @@
 # OBS End Screen
 
+## Settings
+These are the settings that can be changed, if not specified in the config file they will use the following defaults:
+- Speed: 10 seconds
+- Shuffle: false
+- Bounce Title: false
+- Horizontal: false
+
+- Speed: Speed of the animation in seconds
+- Shuffle: Shuffle the order of the images
+- Bounce Title: Add a bounce animation to the title
+- Horizontal: Change the animation direction to horizontal 
+
 ## JSON Example
 File should be named `config.json` and located in the config folder. (folder must be created manually)
 ```json
