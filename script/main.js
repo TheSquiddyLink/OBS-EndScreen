@@ -77,11 +77,21 @@ async function main(){
         update();
     })
 }
+/**
+ * 
+ * @param {String} string 
+ * @returns {Array<String>}
+ */
 function seperateLetters(string){
     const letters = string.split("");
     console.log(letters);
     return letters;
 }
+/**
+ * 
+ * @param {String} string 
+ * @returns {Array<HTMLSpanElement>} 
+ */
 function spanPerLetter(string){
     const letters = seperateLetters(string);
     const arr = [];
