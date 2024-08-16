@@ -2,11 +2,11 @@
 
 
 ## Description
-This is a simple document that will display images with a title and a description. The intent for this is to be used to display socials and other information durring the end credits, however it can be used for other purposes.
+This is a simple document that will display images with a title and a description. The intent is to be used to display socials and other information during the end credits, however, it can be used for different purposes.
 
-**NOTE** This project currnetly not complete, however it is functional, further documentation will be added as the project progresses, as well as new features are planned to be added.
+**NOTE** This project is currently not complete, however, it is functional, further documentation will be added as the project progresses, as well as new features are planned to be added.
 
-This project as well as others on this GitHub are made by Squibs (aka TheSquiddyLink). This project is being use on [SquibsLand - Twitch](https://www.twitch.tv/squibsland).
+This project and others on this GitHub are made by Squibs (aka TheSquiddyLink). This project is being used on [SquibsLand - Twitch](https://www.twitch.tv/squibsland).
 
 If you would like to preview the project you can head to the [Demo](https://thesquiddylink.github.io/OBS-EndScreen/).
 
@@ -20,10 +20,10 @@ If you would like to preview the project you can head to the [Demo](https://thes
 5. Navigate to the `images` folder, and add your images. All images must be a PNG. Square images are recommended.
 6. Open the `index.html` file in a web browser to view the project.
 7. Open OBS and add a new browser source.
-8. Select local file then chose the `index.html` file in this project.
+8. Select the local file then choose the `index.html` file in this project.
 9. Set the width to 800 and the height to 300 for the best results.
 
-If you wish to adjust the style of the project, you can edit the `main.css` file in the `style` folder [here](./style/main.css). Information on overiding the CSS can be found [here](#css-overrides).
+If you wish to adjust the style of the project, you can edit the `main.css` file in the `style` folder [here](./style/main.css). Information on overriding the CSS can be found [here](#css-overrides).
 
 ## Settings
 These are the settings that can be changed, if not specified in the config file they will use the following defaults:
@@ -34,7 +34,7 @@ These are the settings that can be changed, if not specified in the config file 
 - Horizontal: Change the animation direction to horizontal (default false)
 
 ## JSON Example
-File should be named `config.json` and located in the config folder. (folder must be created manually)
+The file should be named `config.json` and located in the config folder. (folder must be created manually)
 ```json
 {
     "settings": {
@@ -52,9 +52,9 @@ File should be named `config.json` and located in the config folder. (folder mus
 ```
 ## CSS Overrides
 If you want to override the CSS in obs these are the classes that are used:
-To see the current CSS naviate to [style/main.css](./style/main.css)
+To see the current CSS navigate to [style/main.css](./style/main.css)
 
-- `body` The entier document
+- `body` The entire document
 - `#imgText` The section that contains the image and text
 - `#image` The image element
 - `.textContainer` The container for the text
@@ -64,4 +64,4 @@ To see the current CSS naviate to [style/main.css](./style/main.css)
 
 - `@keyframes slide` The animation for the slide
 - `@keyframes bounce` The animation for the bounce
-- `@keyframes slideH` The animation for horizontal slide
+- `@keyframes slideH` The animation for the horizontal slide
